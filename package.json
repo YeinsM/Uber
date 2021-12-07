@@ -20,8 +20,11 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@types/crypto-js": "^4.0.2",
+    "crypto-js": "^3.1.9-1",
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.3.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

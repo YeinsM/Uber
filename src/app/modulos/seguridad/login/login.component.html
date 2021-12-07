@@ -1,53 +1,56 @@
 <div class="center-align black">
-    <div class="section"></div>
-    <main>
-        <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/osPE7V5.gif" />
-        <div class="section"></div>
-
-        <h5 class="indigo-text">Please, login into your account</h5>
-        <div class="section"></div>
-
-        <div class="container">
-            <div class="z-depth-1 grey darken-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #424242;">
-
-            <form class="col s12 grey darken-4" method="post">
-                <div class='row'>
-                <div class='col s12'>
+  <div class="row">
+    <div class="col s12 l4 offset-l4 black">
+      <img
+        class="responsive-img"
+        style="width: 250px"
+        src="https://i.imgur.com/osPE7V5.gif" />
+      <div class="card grey darken-4 lighten-3">
+        <div class="card-content">
+          <h5 class="card-title center-align indigo-text"><strong>Identificación de Usuarios</strong></h5>
+          <!-- <form> -->
+          <form [formGroup]="fgValidacion" (ngSubmit)="identificarUsuario()">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input
+                  formControlName="correo"
+                  type="email"
+                  id="email"
+                  class="validate" />
+                <label for="email">Correo Electrónico</label>
+                <div class="mensajeValidacion indigo-text">
+                  <strong>Este campo es requerido.</strong>
                 </div>
-                </div>
-
-                <div class='row'>
-                <div class='input-field col s12'>
-                    <i class="material-icons prefix">account_circle</i>
-                    <input class='validate indigo-text' type='email' name='email' id='email' />
-                    <label for='email'>Enter your email</label>
-                </div>
-                </div>
-
-                <div class='row'>
-                <div class='input-field col s12'>
-                    <i class="material-icons prefix">key</i>
-                    <input class='validate indigo-text' type='password' name='password' id='password' />
-                    <label for='password'>Enter your password</label>
-                </div>
-                <label style='float: right;'>
-                                    <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
-                                </label>
-                </div>
-
-                <br />
-                
-                <div class='row'>
-                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
-                </div>
-                
-            </form>
+              </div>
             </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">vpn_key</i>
+                <input
+                  formControlName="clave"
+                  type="password"
+                  id="password"
+                  class="validate" />
+                <label for="email">Contraseña</label>
+                <div class="mensajeValidacion indigo-text">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="row center-align">
+              <button
+                [disabled]="!fgValidacion.valid"
+                class="btn waves-effect waves-light"
+                type="submit"
+                name="action" >
+                Login
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </form>
         </div>
-        <a href="#!">Create account</a>
-        
-
-        <div class="section"></div>
-        <div class="section"></div>
-    </main>
+      </div>
+    </div>
+  </div>
 </div>
