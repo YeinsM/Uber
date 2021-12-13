@@ -15,19 +15,22 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input formControlName="coordenada_x" type="text" class="validate">
-          <label class="active" for="coordenada_x">Coordenada x</label>
+          <input formControlName="coordenadaX" type="text" class="validate">
+          <label class="active" for="coordenadaX">Coordenada X</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input formControlName="coordenada_y" type="text" class="validate">
-          <label class="active" for="coordenada_y">Coordenada y</label>
+          <input formControlName="coordenadaY" type="text" class="validate">
+          <label class="active" for="coordenadaY">Coordenada Y</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input formControlName="tipo" type="text" class="validate">
+          <select class="browser-default" formControlName="tipo">
+            <option value="Terminal">Terminal</option>
+            <option value="Intermedia">Intermedia</option>
+          </select>
           <label class="active" for="tipo">Tipo</label>
         </div>
       </div>

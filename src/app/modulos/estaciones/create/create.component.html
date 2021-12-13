@@ -13,20 +13,23 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input formControlName="coordenada_x" type="text" class="validate">
-          <label for="coordenada x">Coordenada X</label>
+          <input formControlName="coordenadaX" type="text" class="validate">
+          <label for="coordenadaX">Coordenada X</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input formControlName="coordenada_y" type="text" class="validate">
-          <label for="coordenada y">Coordenada Y</label>
+          <input formControlName="coordenadaY" type="text" class="validate">
+          <label for="coordenadaY">Coordenada Y</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input formControlName="tipo" type="text" class="validate">
-          <label for="tipo">Tipo de estacion</label>
+          <select class="browser-default" formControlName="tipo">
+            <option value="" disabled selected>Tipo</option>
+            <option>Terminal</option>
+            <option>Intermedia</option>
+          </select>
         </div>
         </div>
    

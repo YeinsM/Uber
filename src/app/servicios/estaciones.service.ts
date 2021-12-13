@@ -29,8 +29,8 @@ export class EstacionesService {
     return this.http.post<EstacionModelo>(`${this.url}/estaciones`, {
       nombre: estacion.nombre,
       direccion: estacion.direccion,
-      coordenada_x: estacion.coordenada_x,
-      coordenada_y: estacion.coordenada_y,
+      coordenadaX: estacion.coordenadaX,
+      coordenadaY: estacion.coordenadaY,
       tipo: estacion.tipo
     },{
       headers: new HttpHeaders({
@@ -43,8 +43,8 @@ export class EstacionesService {
     return this.http.patch<EstacionModelo>(`${this.url}/estaciones/${estacion.id}`, {
       nombre: estacion.nombre,
       direccion: estacion.direccion,
-      coordenada_x: estacion.coordenada_x,
-      coordenada_y: estacion.coordenada_y,
+      coordenadaX: estacion.coordenadaX,
+      coordenadaY: estacion.coordenadaY,
       tipo: estacion.tipo
     }, {
       headers: new HttpHeaders({

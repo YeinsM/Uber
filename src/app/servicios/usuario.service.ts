@@ -9,12 +9,13 @@ import { SeguridadService } from './seguridad.service';
 })
 export class UsuarioService {
 
+  url = "http://localhost:3000"
+  token: string = ''
+
   constructor(private http: HttpClient,
     private seguridadService: SeguridadService) { 
       this.token = this.seguridadService.getToken();
     }
-  url = "http://localhost:3000"
-  token: string = ''
 
   store(usuario: UsuarioModelo): Observable<UsuarioModelo> {
     return this.http.post<UsuarioModelo>(`${this.url}/usuarios`, {

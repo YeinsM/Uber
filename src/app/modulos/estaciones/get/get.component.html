@@ -7,8 +7,8 @@
         <tr>
             <th>Nombre</th>
             <th>Direccion</th>
-            <th>Coordenada x</th>
-            <th>Coordenada y</th>
+            <th>Coordenada X</th>
+            <th>Coordenada Y</th>
             <th>Tipo</th>
             <th>Acciones</th>
         </tr>
@@ -18,8 +18,8 @@
         <tr *ngFor="let p of listado">
           <td>{{p.nombre}}</td>
           <td>{{p.direccion}}</td>
-          <td>{{p.coordenada_x}}</td>
-          <td>{{p.coordenada_y}}</td>
+          <td>{{p.coordenadaX}}</td>
+          <td>{{p.coordenadaY}}</td>
           <td>{{p.tipo}}</td>
           <td>
             <a routerLink="/estaciones/edit/{{p.id}}" class="btn">Editar</a>&nbsp;

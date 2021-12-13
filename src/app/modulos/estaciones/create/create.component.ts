@@ -19,8 +19,8 @@ export class CreateComponent implements OnInit {
   fgValidacion = this.fb.group({
     nombre: ['', [Validators.required]],
     direccion: ['', [Validators.required]],
-    coordenada_x: ['', [Validators.required]],
-    coordenada_y: ['', [Validators.required]],
+    coordenadaX: ['', [Validators.required]],
+    coordenadaY: ['', [Validators.required]],
     tipo: ['', [Validators.required]],
   });
 
@@ -31,8 +31,8 @@ export class CreateComponent implements OnInit {
     let estacion = new EstacionModelo();
     estacion.nombre = this.fgValidacion.controls["nombre"].value;
     estacion.direccion = this.fgValidacion.controls["direccion"].value;
-    estacion.coordenada_x = this.fgValidacion.controls["coordenada_x"].value;
-    estacion.coordenada_y = this.fgValidacion.controls["coordenada_y"].value;
+    estacion.coordenadaX = this.fgValidacion.controls["coordenadaX"].value;
+    estacion.coordenadaY = this.fgValidacion.controls["coordenadaY"].value;
     estacion.tipo = this.fgValidacion.controls["tipo"].value;
 
     this.estacionService.store(estacion).subscribe((data: EstacionModelo)=> {

@@ -1,1 +1,46 @@
-<p>create works!</p>
+<div class="container">
+    <h3 class="center-align">Registrar Servicio</h3>
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
+        <div class="row">
+            <div class="input-field col s12">
+                <input formControlName="fecha" type="date" class="validate" />
+                <label for="fecha">Fecha</label>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="hora_inicio" type="time" class="validate" />
+                <label for="hora_inicio">Hora Inicio</label>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="hora_fin" type="time" class="validate" />
+                <label for="hora_fin">Hora Final</label>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="input-field col s6">
+            <select class="browser-default" formControlName="nombre_conductor">
+                <option value="" disabled selected>Usuario</option>
+                <option *ngFor="let usuarios of listaUsuarios" value="{{ usuarios.nombre }}">
+                  {{ usuarios.nombre }}
+                </option>
+            </select>
+            </div>
+
+            <div class="input-field col s6">
+                <input formControlName="placa_vehiculo" type="text" class="validate" />
+                <label for="placa_vehiculo">Placa</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input formControlName="dinero_recogido" type="number" class="validate" />
+                <label for="dinero_recogido">Dinero</label>
+            </div>
+        </div>
+        <div class="row center-align">
+            <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">
+                Enviar
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+</div>

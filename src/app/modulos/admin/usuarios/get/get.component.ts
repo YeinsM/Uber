@@ -40,6 +40,4 @@ export class GetComponent implements OnInit {
       }
     })
   }
-
-
 }

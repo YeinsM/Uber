@@ -93,8 +93,4 @@ export class SeguridadService {
     }
     return ''
   }
-
-
-
-
 }
