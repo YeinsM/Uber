@@ -37,7 +37,7 @@ export class GetComponent implements OnInit {
       confirmButtonText: 'Aceptar',
     }).then((result) => {
       if (result.isConfirmed) {
-        this.usuarioService.delete(id).subscribe((data: any) => {
+        this.servicioService.delete(id).subscribe((data: any) => {
           Swal.fire('¡Eliminado correctamente!', '', 'success')
           this.getAll();
         })
